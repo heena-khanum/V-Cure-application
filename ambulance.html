@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Booking</title>
+    <link rel="stylesheet" href="ambulance.css">
+</head>
+<body>
+
+    <!-- Header Section (Copied from homenew.html) -->
+    <header>
+        <div class="logo-container">
+            <img src="logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        
+        <!-- Navigation Icons -->
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+
+        <!-- Dropdown Menu -->
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+
+    <!-- Ambulance Options Section -->
+    <section class="ambulance-options">
+        <div class="location-selection">
+            <div class="dropdown">
+                <button class="dropdown-btn" id="current-location-btn">Select Current Location</button>
+                <div class="dropdown-content" id="current-location-options">
+                    <button class="location-option" data-location="Location A">Location A</button>
+                    <button class="location-option" data-location="Location B">Location B</button>
+                    <button class="location-option" data-location="Location C">Location C</button>
+                </div>
+                <span id="current-location-display">Selected Location: None</span>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn" id="preferred-location-btn">Preferred Hospital</button>
+                <div class="dropdown-content" id="preferred-location-options">
+                    <button class="location-option" data-location="Shridevi Hospital">Shridevi Hospital</button>
+                    <button class="location-option" data-location="Government Hospital">Government Hospital</button>
+                </div>
+                <span id="preferred-location-display">Preferred Hospital: None</span>
+            </div>
+        </div>
+        
+        <!-- Basic Ambulance Option -->
+        <div class="ambulance-box">
+            <h3>Basic Ambulance</h3>
+            <p>Capacity: 1-2</p>
+            <p>Estimated Time of Arrival: 10 mins</p>
+            <p>Cost: ₹250</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+        <!-- Wheelchair Accessible Ambulance Option -->
+        <div class="ambulance-box">
+            <h3>Wheelchair Accessible Ambulance</h3>
+            <p>Capacity: 1-2</p>
+            <p>Estimated Time of Arrival: 10 mins</p>
+            <p>Cost: ₹300</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Confirmation Message -->
+    <div id="confirmation-message" class="confirmation-message" style="display: none;"></div>
+
+    <script src="ambulance.js"></script>
+</body>
+</html>

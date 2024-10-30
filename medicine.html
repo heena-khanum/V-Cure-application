@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Medication</title>
+    <link rel="stylesheet" href="medicine.css">
+    <style>
+        /* Feedback Section Styling */
+        .feedback-section {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .average-rating {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .stars {
+            display: inline-flex;
+            cursor: pointer;
+        }
+        .stars span {
+            font-size: 30px;
+            color: #ddd;
+            transition: color 0.2s ease;
+        }
+        .stars span.active {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="Assets/logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+        <!-- Dropdown Menu -->
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+
+    <!-- Medicine Selection Section -->
+    <main>
+        <section class="medicine-selection">
+            <h2>Select a Medical Store</h2>
+            <div class="medical-list">
+                <div class="medical-card" onclick="chooseMedical('Shridevi Medical')">
+                    <img src="Assets/logofinal.webp" alt="Medical 1">
+                    <span>Shridevi Medical</span>
+                </div>
+                <div class="medical-card" onclick="chooseMedical('Karnataka Medicals')">
+                    <img src="Assets/logofinal.webp" alt="Medical 2">
+                    <span>Karnataka Medicals</span>
+                </div>
+                <div class="medical-card" onclick="chooseMedical('Ganga Medicals')">
+                    <img src="Assets/logofinal.webp" alt="Medical 3">
+                    <span>Ganga Medicals</span>
+                </div>
+                <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7763.19854481676!2d77.0968996!3d13.375175400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02e0c45d839c3%3A0x53bf74698175efae!2sShridevi%20Institute%20of%20Medical%20Sciences%20and%20Research%20Hospital!5e0!3m2!1sen!2sin!4v1730253554904!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Medicine Form Section -->
+        <div id="medicine-form-section" style="display: none;">
+            <h2>Enter Number of Medicines</h2>
+            <input type="number" id="medicine-count" min="1" required>
+            <button type="button" id="create-forms-button" onclick="createForms()">Create Forms</button>
+            <div class="medicine-form-container" id="medicine-form-container"></div>
+            <button type="button" id="submit-button" onclick="submitOrder()" disabled>Submit Order</button>
+        </div>        
+        
+        <div id="thank-you-popup" style="display: none;">
+            <p>Thank you for using our services!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>        
+
+        <!-- Feedback Section -->
+        <section class="feedback-section">
+            <h2>Feedback</h2>
+            <div class="average-rating">Average Rating: <span id="average-rating">4.2</span> ★</div>
+            <div class="stars" id="star-rating">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+        </section>        
+    </main>
+
+    <script src="medicine.js"></script>
+    <script>
+        // Star rating event listener
+        document.querySelectorAll('#star-rating span').forEach(star => {
+            star.addEventListener('click', function() {
+                let rating = this.getAttribute('data-value');
+                document.querySelectorAll('#star-rating span').forEach(s => s.classList.remove('active'));
+                for (let i = 0; i < rating; i++) {
+                    document.querySelectorAll('#star-rating span')[i].classList.add('active');
+                }
+                alert('Thank you for rating ' + rating + ' stars!');
+            });
+        });
+    </script>
+</body>
+</html>

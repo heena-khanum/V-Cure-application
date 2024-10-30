@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Discounts</title>
+    <link rel="stylesheet" href="discount.css">
+</head>
+<body>
+
+    <!-- Header Section (same as in ambulance.html) -->
+    <header>
+        <div class="logo-container">
+            <img src="logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        
+        <!-- Navigation Icons -->
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+
+        <!-- Dropdown Menu -->
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+
+    <!-- Discount Section -->
+    <section class="discount-section">
+        <h2>Get Hospital Discounts with Us!</h2>
+
+        <!-- Discount Box 1 -->
+        <div class="discount-box">
+            <h3>Hospital Name: Shridevi Hospital</h3>
+            <p>Address: Sira road, Tumkur</p>
+            <p>Discount: 20% off</p>
+            <p>Valid Until: 31 Dec 2024</p>
+        </div>
+
+        <!-- Discount Box 2 -->
+        <div class="discount-box">
+            <h3>Hospital Name: Government Hospital</h3>
+            <p>Address: Tumkur</p>
+            <p>Discount: 20% off</p>
+            <p>Valid Until: 31 Dec 2024</p>
+        </div>
+    </section>
+
+    <script src="discount.js"></script>
+</body>
+</html>

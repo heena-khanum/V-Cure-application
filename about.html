@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Header Section (Copied from homenew.html) -->
+    <header>
+        <div class="logo-container">
+            <img src="logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        
+        <!-- Navigation Icons -->
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+
+        <!-- Dropdown Menu -->
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+    <main class="about-container">
+        <h1>About Us</h1>
+        
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>V-Cure is dedicated to bringing healthcare to your fingertips. We aim to make virtual consultations, ambulance booking, and medication orders easy, fast, and accessible for everyone, anytime and anywhere.</p>
+        </section>
+        
+        <section class="about-section">
+            <h2>Our Purpose</h2>
+            <p>Our mission is to bridge the gap between patients and healthcare providers. By leveraging technology, we strive to provide quality healthcare services that are affordable and accessible to all, especially in remote or underserved areas.</p>
+        </section>
+        
+        <section class="about-section">
+            <h2>Benefits</h2>
+            <ul>
+                <li>24/7 access to healthcare services</li>
+                <li>Efficient ambulance booking for emergencies</li>
+                <li>Easy access to medication orders</li>
+                <li>Enhanced doctor-patient interaction through virtual consultations</li>
+            </ul>
+        </section>
+        
+        <section class="about-section">
+            <h2>How to Use</h2>
+            <p>Using V-Cure is simple:</p>
+            <ol>
+                <li>Create an account or log in to access services.</li>
+                <li>Book consultations, ambulance services, or order medications through the respective sections.</li>
+                <li>Follow the on-screen instructions for each service for a smooth experience.</li>
+            </ol>
+        </section>
+    </main>
+
+    <script src="about.js"></script>
+</body>
+</html>

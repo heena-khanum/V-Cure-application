@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Video Consultation</title>
+    <link rel="stylesheet" href="sos.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="Assets/logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        
+        <!-- Navigation Icons -->
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+
+        <!-- Dropdown Menu -->
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+
+    <!-- Main Consultation Section -->
+    <main class="main-container">
+        <h2>SOS Video Consultation</h2>
+        <p>Instant SOS video consultation with an expert whenever you need it most.</p>
+
+        <div class="category-selection-banner">
+            Select a category to find the right doctor for your need
+        </div>
+
+        <!-- Specialties Selection -->
+        <div class="specialties-container">
+            <div class="specialty-box" onclick="redirectToDoctors('General Health')">
+                <img src="Assets/Healthcare.png" alt="General Health Icon" class="specialty-icon">
+                <p class="specialty-name">General Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Orthopedics')">
+                <img src="Assets/Orthopedics.png" alt="Orthopedics Icon" class="specialty-icon">
+                <p class="specialty-name">Orthopedics</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Pediatrics')">
+                <img src="Assets/Infant health care.png" alt="Pediatrics Icon" class="specialty-icon">
+                <p class="specialty-name">Pediatrics</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Dermatology')">
+                <img src="Assets/skincare-icon.jpeg" alt="Dermatology Icon" class="specialty-icon">
+                <p class="specialty-name">Dermatology</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Men\'s Health')">
+                <img src="Assets/mens-health-icon.jpeg" alt="Men's Health Icon" class="specialty-icon">
+                <p class="specialty-name">Men's Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Women\'s Health')">
+                <img src="Assets/womens-health-icon.jpeg" alt="Women's Health Icon" class="specialty-icon">
+                <p class="specialty-name">Women's Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Heart Health')">
+                <img src="Assets/heart-health-icon.jpeg" alt="Heart Health Icon" class="specialty-icon">
+                <p class="specialty-name">Heart Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Digestive Health')">
+                <img src="Assets/digestive-health-icon.jpeg" alt="Digestive Health Icon" class="specialty-icon">
+                <p class="specialty-name">Digestive Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Mental Health')">
+                <img src="Assets/mental-health-icon.jpeg" alt="Mental Health Icon" class="specialty-icon">
+                <p class="specialty-name">Mental Health</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Allergies')">
+                <img src="Assets/allergies-icon.jpeg" alt="Allergies Icon" class="specialty-icon">
+                <p class="specialty-name">Allergies</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('ENT')">
+                <img src="Assets/ent-icon.jpeg" alt="ENT Icon" class="specialty-icon">
+                <p class="specialty-name">Ear Nose Throat (ENT)</p>
+            </div>
+            <div class="specialty-box" onclick="redirectToDoctors('Nutrition and Diet')">
+                <img src="Assets/nutrition-icon.jpeg" alt="Nutrition Icon" class="specialty-icon">
+                <p class="specialty-name">Nutrition and Diet</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const isDropdownVisible = dropdownMenu.style.display === "block";
+
+    // Toggle display of dropdown
+    dropdownMenu.style.display = isDropdownVisible ? "none" : "block";
+
+    // If the dropdown is now visible, add a listener to close it when clicking outside
+    if (!isDropdownVisible) {
+        document.addEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+
+        function redirectToDoctors(specialization) {
+            window.location.href = `doctors_by_specialization.php?specialization=${encodeURIComponent(specialization)}`;
+        }
+        function closeDropdownOnClickOutside(event) {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const menuButton = document.querySelector(".menu");
+
+    // Check if the click is outside both the dropdown and the menu button
+    if (!dropdownMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        dropdownMenu.style.display = "none";
+        document.removeEventListener("click", closeDropdownOnClickOutside);
+    }
+}
+    </script>
+</body>
+</html>

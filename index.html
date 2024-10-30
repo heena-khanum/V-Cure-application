@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Additional CSS styles for the square button */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            cursor: pointer;
+            padding: 10px; /* Space around the icon */
+            margin-left: 5px; /* Space between buttons */
+            border-radius: 5px; /* Optional: keep a slight rounding */
+            font-size: 20px; /* Adjust font size */
+        }
+
+        #voice-output, #voice-input, #enter-button {
+            width: 50px; /* Set a fixed width */
+            height: 50px; /* Set a fixed height */
+            border-radius: 5px; /* Optional: keep a slight rounding */
+        }
+
+        .output-container {
+            margin-top: 20px; /* Space above output */
+            max-height: 400px; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            border: 1px solid #ccc; /* Optional: border for better visibility */
+            padding: 10px; /* Padding inside the output area */
+            border-radius: 5px; /* Slight rounding for corners */
+        }
+
+        .conversation {
+            margin-bottom: 10px; /* Space between conversations */
+            padding: 5px; /* Space inside each conversation */
+            border-radius: 5px; /* Slight rounding for corners */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .user {
+            background-color: #e0f7fa; /* Light blue for user messages */
+        }
+
+        .doctor {
+            background-color: #ffe0b2; /* Light orange for doctor messages */
+        }
+
+        .current-conversation {
+            background-color: #81d4fa; /* Highlight color for current conversation */
+        }
+
+        .muted {
+            background-color: #ffccbc; /* Light red for muted state */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logofinal.webp" alt="Logo" class="logo-image">
+            <span class="logo-name">V-Cure</span>
+        </div>
+        <nav class="nav-icons">
+            <div class="icon-circle" onclick="window.location.href='index.html'">Virtual Clinic</div>
+            <div class="icon-circle" onclick="window.location.href='sos.html'">SOS Video Consultation</div>
+            <div class="icon-circle" onclick="window.location.href='medicine.html'">Order Medication</div>
+            <div class="icon-circle" onclick="window.location.href='discount.html'">Hospital Discount</div>
+            <div class="icon-circle" onclick="window.location.href='ambulance.html'">Ambulance Booking</div>
+            <div class="icon-circle" onclick="window.location.href='about.html'">About</div>
+            <div class="icon-circle" onclick="window.location.href='developers.html'">Developers</div>
+        </nav>
+        <div class="menu" onclick="toggleDropdown()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.html">Virtual Clinic</a>
+            <a href="sos.html">SOS Video Consultation</a>
+            <a href="medicine.html">Order Medication</a>
+            <a href="discount.html">Hospital Discount</a>
+            <a href="ambulance.html">Ambulance Booking</a>
+            <a href="about.html">About</a>
+            <a href="developers.html">Developers</a>
+        </div>
+    </header>
+    <div class="note-container">
+        <p class="note"><strong>Note:</strong> Please specify your minor ailments clearly. The given prescriptions are applicable for all with an age of 10-60 years.</p>
+    </div>
+    
+    <main class="main-container">
+        <div class="output-container" id="output-container">
+            <div class="conversation user">I am having body pain from 4 days</div>
+            <div class="conversation doctor">Dr. Cure: Condition: body pain, fatigue<br>
+                Prevention: avoid Sugary Foods, avoid Dairy Products, avoid Excessive Caffeine<br>
+                Medical suggestion: Paracetamol 650 mg (1-0-1), Cefixime 200 mg (1-0-1)<br>
+                This information has been verified and approved by Dr. Asra. If symptoms persist for more than 3 days, please consult a doctor.
+            </div>
+
+            <div class="conversation user">I have sore throat and running nose</div>
+            <div class="conversation doctor">Dr. Cure: Condition: Cold<br>
+                Food Recommendations: Warm Broths and Soups, Warm Water, Honey, Ginger Tea, avoid cold Beverages<br>
+                Medical suggestion: Cetrizine (0-0-1)<br>
+                This information has been verified and approved by Dr. Asra. If symptoms persist for more than 3 days, please consult a doctor.
+            </div>
+
+            <div class="conversation user">I have been coughing since yesterday</div>
+            <div class="conversation doctor">Dr. Cure: Condition: Common Cold (Early Stages)<br>
+                Food Recommendations: Warm Broths and Soups, Warm Water, Honey, Ginger Tea<br>
+                Medical Suggestion: Clarinova 300 mg (1-0-1), Syrup Astakind LS 5ml<br>
+                This information has been verified and approved by Dr. Asra. If symptoms persist for more than 3 days, please consult a doctor.
+            </div>
+
+            <div class="conversation user">I cut my finger while cooking</div>
+            <div class="conversation doctor">Dr. Cure: Condition: Anemia<br>
+                Food Recommendations: Fruits, Vegetables, Protein.<br>
+                Medical suggestion: Femiup (0-1-0), Syrup Heamocal 5ml (1-0-1)<br>
+                This information has been verified and approved by Dr. Asra. If symptoms persist for more than 3 days, please consult a doctor.
+            </div>
+        </div>
+
+        <div class="doctor-video-container">
+            <video id="doctor-video" autoplay loop muted>
+                <source src="dr.mp4" type="video/webm">
+            </video>
+            <p class="doctor-name">Dr. Cure</p>
+        </div>
+    </main>
+    
+    <section class="input-section">
+        <div class="note">
+            <p><strong>Note:</strong> This application is not intended for use by children.</p>
+        </div>
+        
+        <div id="recommendations" class="recommendations">
+            <!-- Recommendations will appear here dynamically -->
+            <div class="recommendation-box" onclick="selectRecommendation(this)">I am having body pain from 4 days</div>
+            <div class="recommendation-box" onclick="selectRecommendation(this)">I have sore throat and running nose</div>
+            <div class="recommendation-box" onclick="selectRecommendation(this)">I have been coughing since yesterday</div>
+            <div class="recommendation-box" onclick="selectRecommendation(this)">I cut my finger while cooking</div>
+        </div>
+        
+        <div class="input-container">
+            <!-- Voice Input Symbol -->
+            <button id="voice-input" class="btn" title="Voice Input" onclick="enableVoiceInput()">🎤</button>
+
+            <!-- Input Field -->
+            <input type="text" id="symptoms-input" placeholder="Type your symptoms here..." autocomplete="off" oninput="showRecommendations()" onkeypress="checkEnter(event)">
+
+            <!-- Enter Symbol -->
+            <button id="enter-button" class="btn" title="Enter" onclick="submitSymptoms()">➔</button>
+
+            <!-- Voice Output Button -->
+            <button id="voice-output" class="btn muted" title="Voice Output" onclick="toggleVoiceOutput()">🔊</button>
+        </div>
+    </section>
+
+    <script src="home.js"></script>
+</body>
+</html>

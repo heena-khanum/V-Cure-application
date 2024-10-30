@@ -1,0 +1,149 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles (same as ambulance.css) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Navigation Icons */
+.nav-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #0077b6;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
+    background-color: #e0f4ff;
+}
+
+/* Menu Icon (for Dropdown) */
+.menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #89c5e4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #005f8f;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #005f8f;
+}
+
+/* Discount Section Styles */
+.discount-section {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.discount-section h2 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Discount Boxes (Styled like Ambulance Options) */
+.discount-box {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.discount-box h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.discount-box p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}

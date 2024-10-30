@@ -1,0 +1,257 @@
+/* Complete styles as provided earlier */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccfeff; /* Darker background color */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-divider {
+    border: none;
+    height: 2px;
+    background-color: #333;  /* Darker color for visibility */
+    margin: 20px 0;  /* Increased margin for more space */
+    width: 100%;  /* Ensure it spans the full width */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #85a2dcd4;
+    border: 1px solid #ccccccbd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0c4;
+}
+
+.text-top {
+    text-align: center;
+}
+
+.user-type-toggle, .form-type-toggle {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.user-type-toggle button, .form-type-toggle button {
+    background-color: #6be26f; /* Light green background */
+    color: rgba(255, 255, 255, 0.678);
+    padding: 10px 20px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.active {
+    background-color: #333;  /* Darker background for active buttons */
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #216c24; /* Light green on focus */
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    background-color: white;
+    padding: 0 5px;
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus + label, select:focus + label, textarea:focus + label,
+input:not(:placeholder-shown) + label, select:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: #62c065;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #36ba3a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #176072;
+}
+/* Common button styling for form toggles */
+/* Common button styling for form toggles */
+button {
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(24, 149, 177);
+}
+
+/* Active state for selected buttons */
+button.active {
+    background-color: darkgreen;
+}
+
+/* Style for the doctor/client toggle section */
+.user-type-options {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.user-type-options button {
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+/* Add a class for selected user type (doctor or client) */
+.user-type-options button.selected {
+    background-color: darkgreen;
+    color: white;
+}
+
+/* For form type toggle buttons */
+.form-type-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hide unused form fields during login */
+
+
+.user-type-options {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.user-type-options button {
+    background-color: #80d998; /* Default background color */
+    border: 1px solid #58db84;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.user-type-options button.selected {
+    background-color: #137617; /* Selected color (green) */
+    color: white; /* Text color for selected state */
+    border: none; /* Remove border for selected state */
+}
+
+.user-type-options button:hover {
+    background-color: #3aa2c8; /* Background on hover */
+}
+/* Hide all form-group fields in login form by default */
+#login-form .form-group {
+    display: none; /* This hides all fields by default */
+}
+
+/* Show only email, password, and medical registration number fields in login form */
+#login-form .form-group.email, 
+#login-form .form-group.password{ /* Include this line */
+    display: block; /* Ensure these fields are displayed */
+}
+

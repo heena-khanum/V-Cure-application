@@ -1,0 +1,257 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    overflow: hidden; /* Prevent scrolling when card is expanded */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #0077b6;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #89c5e4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #005f8f;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #005f8f;
+}
+
+/* Main Container for Doctors */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Doctor Grid Styles */
+.doctor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Doctor Card Styling */
+.doctor-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Normal width */
+    transition: all 0.4s ease; /* Smooth transition */
+    overflow: hidden;
+    cursor: pointer; /* Pointer cursor for cards */
+}
+
+/* Hover Effect */
+.blur-background > *:not(.expanded-card) {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+}
+
+/* Expanded Card Styling */
+.expanded-card {
+    display: flex;
+    align-items: center;
+    width: 50vw; /* Half the viewport width */
+    height: 60vh;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.expanded-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.expanded-card .doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 50%;
+}
+
+.expanded-card h3 {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+.expanded-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.expanded-card button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 150px;
+    font-size: 16px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expanded-card button:hover {
+    background-color: #005f8f;
+}
+
+/* Doctor Info Layout */
+.doctor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: opacity 0.4s ease;
+}
+
+.doctor-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.card-hover .doctor-photo {
+    width: 200px;
+    height: 200px;
+}
+
+/* Availability Badge */
+.availability {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+.doctor-card.unavailable .availability {
+    background-color: red;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background-color: #0077b6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f8f;
+}
+
+/* Smooth Fade Out Transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

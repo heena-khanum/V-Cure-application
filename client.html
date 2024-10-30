@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Registration/Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMenu() {
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            dropdownMenu.classList.toggle('show');
+        }
+
+        function toggleUserType(type) {
+            const doctorButton = document.querySelector('.doctor-button');
+            const clientButton = document.querySelector('.client-button');
+
+            if (type === 'doctor') {
+                window.location.href = 'index.html';
+                doctorButton.classList.add('selected');
+                clientButton.classList.remove('selected');
+            } else if (type === 'client') {
+                window.location.href = 'client.html';
+                clientButton.classList.add('selected');
+                doctorButton.classList.remove('selected');
+            }
+        }
+
+        function toggleFormType(event, type) {
+            const registrationForm = document.getElementById('registration-form');
+            const loginForm = document.getElementById('login-form');
+            const buttons = document.querySelectorAll('.form-type-toggle button');
+
+            // Toggle button appearance
+            buttons.forEach(button => button.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Toggle form visibility
+            if (type === 'register') {
+                registrationForm.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                registrationForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu')) {
+                const dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Assets/logo4.png" alt="Logo" class="logo-image" />
+            <span class="logo-name">V-cure</span>
+        </div>
+        <div class="menu" onclick="toggleMenu()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="#" onclick="toggleUserType('doctor')">Doctor Registration/Login</a>
+            <a href="#" onclick="toggleUserType('client')">Client Registration/Login</a>
+        </div>
+    </header>
+    <hr class="header-divider">
+
+    <div class="text-top">
+        <h1>Your health,our prirotiy- Anytime, Anywhere</h1>
+    </div>
+
+    <div class="user-type-options">
+        <button class="doctor-button" onclick="toggleUserType('doctor')">Doctor</button>
+        <button class="client-button selected" onclick="toggleUserType('client')">Client</button>
+    </div>
+
+    <div class="container">
+        <div class="form-type-toggle">
+            <button onclick="toggleFormType(event, 'register')">Register</button>
+            <button onclick="toggleFormType(event, 'login')">Already registered? Login</button>
+        </div>
+
+        <!-- Client Registration Form -->
+        <div id="registration-form">
+            <h2>Client Registration</h2>
+            <form id="registration-form" action="register.php" method="POST">
+                <div class="form-group">
+                    <input type="text" id="fullname" name="fullname" required placeholder=" " />
+                    <label for="fullname">Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" required placeholder=" " />
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" required placeholder=" " />
+                    <label for="password">Create Password</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder=" " />
+                    <label for="confirm-password">Confirm Password</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="city" name="city" required placeholder=" " />
+                    <label for="city">City</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="state" name="state" required placeholder=" " />
+                    <label for="state">State</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="age" name="age" required placeholder=" " min="1" />
+                    <label for="age">Age</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="country" name="country" required placeholder=" " />
+                    <label for="country">Country</label>
+                </div>
+                <div class="form-group">
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="gender">Gender</label>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Client Login Form (only email and password fields) -->
+        <!-- Client Login Form (only email and password fields) -->
+        <div id="login-form" style="display: none;">
+            <h2>Client Login</h2>
+            <form action="login.php" method="POST">
+                <div class="form-group email">
+                    <input type="email" id="login-email" name="login-email" required placeholder=" " />
+                    <label for="login-email">Email</label>
+                </div>
+                <div class="form-group password">
+                    <input type="password" id="login-password" name="login-password" required placeholder=" " />
+                    <label for="login-password">Password</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

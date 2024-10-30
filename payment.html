@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center container styling */
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .payment-container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Scanner image styling */
+        .scanner-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Pay button styling */
+        .pay-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pay-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <!-- Scanner image -->
+        <img src="Assets/scanner1.jpg" alt="Scanner for Payment" class="scanner-image">
+
+        <!-- Pay button -->
+        <button class="pay-button" onclick="startCall()">Pay and Start the Call</button>
+    </div>
+
+    <!-- JavaScript to redirect on button click -->
+    <script>
+        function startCall() {
+            // Redirect to video.html
+            window.location.href = 'video.html';
+        }
+    </script>
+</body>
+</html>
