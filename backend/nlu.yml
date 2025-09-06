@@ -1,0 +1,517 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: dry_cough_coughing_without_no_fever_30_31_32_33_34_35_36_37_38_39_40
+  examples: |
+    - I've had a dry cough for a while, but no fever. Could my weight of 30-40 kg be related to this?
+    - Why do I have a persistent dry cough without a fever, and could my lower weight (around 30-40 kg) be causing it?
+    - Is it normal to have a dry cough without fever, especially if I weigh only 30-40 kg?
+    - Could my weight of 30-40 kg be why I'm coughing without any fever?
+    - I've been coughing a lot, but I don’t have a fever. Could my low weight (30-40 kg) affect this?
+    - Does weighing 30-40 kg make me more likely to have a dry cough without fever?
+    - Could my dry cough without fever be linked to my low weight of 30-40 kg?
+    - Is it common for people weighing 30-40 kg to experience a dry cough with no fever?
+    - I weigh around 30-40 kg and have a dry cough but no fever. Should I be concerned?
+    - What could cause a dry cough without fever in someone who weighs 30-40 kg?
+    - iam having dry cough without fever my weight is 35 kg
+    - iam having dry cough without fever
+    - i have dry cough without fever
+
+- intent: dry_cough_with_fever_30_31_32_33_34_35_36_37_38_39_40
+  examples: |
+    - What should I do if I have a dry cough, fever, and my weight is around 30-40 kg?
+    - What should I do if I have a dry cough, fever, and my weight is around 30-40 kg?
+    - Can having a dry cough and fever at 30-40 kg be related to any specific illness?
+    - What does it mean if I have a dry cough and fever and weigh between 30-40 kg?
+    - Should I be concerned about a dry cough and fever with my weight around 30-40 kg?
+    - If I have a dry cough and fever, and my weight is 30-40 kg, what can I do to feel better?
+    - I weigh 30-40 kg and have a fever with a dry cough. Is there a recommended treatment?
+    - Why might someone with a weight of 30-40 kg have a dry cough and fever?
+    - What could be causing my dry cough and fever if I weigh between 30-40 kg?
+    - iam having dry cough with fever my weight is 36 kg
+    - iam having dry cough with fever
+    - i have dry cough with fever
+
+- intent: dry_cough_without_no_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+  examples: |
+    - I've had a dry cough for a while, but no fever. Could my weight of 41-70 kg be related to this?
+    - Why do I have a persistent dry cough without a fever, and could my lower weight (around 41-70 kg) be causing it?
+    - Is it normal to have a dry cough without fever, especially if I weigh only 41-70 kg?
+    - Could my weight of 41-70 kg be why I'm coughing without any fever?
+    - I've been coughing a lot, but I don’t have a fever. Could my low weight (41-70 kg) affect this?
+    - Does weighing 41-70 kg make me more likely to have a dry cough without fever?
+    - Could my dry cough without fever be linked to my low weight of 41-70 kg?
+    - Is it common for people weighing 41-70 kg to experience a dry cough with no fever?
+    - I weigh around 541-70 kg and have a dry cough but no fever. Should I be concerned?
+    - What could cause a dry cough without fever in someone who weighs 41-70 kg?
+    - iam having dry cough without fever my weight is 45 kg
+    - i have been coughing continuosly
+    - i have been coughing since 4 days
+    - i have cough what to do
+    - iam coughing since yesterday
+    - i have continuos cough
+    - I have been coughing since yesterday
+    - i have sore throat 
+    - i have throat infection
+    - iam having sore throat
+    - iam having throat pain
+
+- intent: dry_cough_with_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+  examples: |
+    - I have a dry cough and a fever. Should I be worried?
+    - I'm coughing a lot, and I have a fever. Is it serious if my weight is between 41 and 70 kg?
+    - Can a dry cough and fever be related to any serious illness for someone weighing around 50 kg?
+    - Does having a fever and a dry cough pose any specific risks if my weight is 41-70 kg?
+    - If I weigh 65 kg and have a dry cough and fever, could it be a sign of something serious?
+    - Could a fever and dry cough be more severe for someone with my weight, between 41-70 kg?
+    - What should I do if I have a dry cough, fever, and weigh about 70 kg?"
+    - Is it common to have a fever and dry cough with my weight being 45 kg?
+    - Can my weight (around 60 kg) make my symptoms of dry cough and fever worse?
+    - What health issues could cause dry cough and fever if I weigh between 41 and 70 kg?
+    - iam having dry cough with fever my weight is 50 kg
+
+- intent: runny_nose_sneezing_watery_eyes
+  examples: |
+    - Why am I sneezing so much with a runny nose and watery eyes?
+    - Could allergies be causing my runny nose and watery eyes?
+    - Is my sneezing and runny nose a sign of a cold or flu?
+    - What can I take to stop my sneezing and runny nose?
+    - How do I know if my runny nose and sneezing are due to allergies or a virus?
+    - My nose is running and I’m sneezing a lot. Should I be concerned about an infection?
+    - Can these symptoms be related to a change in the weather?
+    - I have sneezing and watery eyes without a cough or fever. What might be causing this?
+    - Could my runny nose and sneezing be caused by a cold, or is it something else?
+    - What can I do to treat watery eyes, sneezing, and a runny nose at home?
+    - iam having runny nose, sneez, and watery eyes my weight is 50 kg
+    - i have runny nose today
+    - have sore throat and running nose
+
+- intent: wet_cough_witout_fever_no
+  examples: |
+    - I've had a wet cough for a while, but no fever. Could my weight of 41-70 kg be related to this?
+    - why do I have a persistent wet cough without a fever, and could my lower weight (around 41-70 kg) be causing it?
+    - Is it normal to have a wet cough without fever, especially if I weigh only 41-70 kg?
+    - I've been coughing a lot, but I don’t have a fever. Could my low weight (41-70 kg) affect this?
+    - Does weighing 41-70 kg make me more likely to have a wet cough without fever?
+    - Could my wet cough without fever be linked to my low weight of 41-70 kg?
+    - i have wet cough without fever
+    - iam having wet cough without fever
+    - iam having wet cough with no fever
+
+- intent: wet_cough_with_fever
+  examples: |
+    - I have a wet cough and a fever. Should I be worried?
+    - I'm wet coughing a lot, and I have a fever. Is it serious if my weight is between 41 and 70 kg?
+    - Can a wet cough and fever be related to any serious illness for someone weighing around 50 kg?
+    - Does having a fever and a wet cough pose any specific risks if my weight is 41-70 kg?
+    - If I weigh 65 kg and have a wet cough and fever, could it be a sign of something serious?
+    - iam having wet cough with fever my weight is 50 kg
+    - i have wet cough with fever
+    - iam having wet cough with fever
+
+- intent: stomach_pain_Abdominal_pain_painful_urination_frequent_urination_Cough_sore_throat_diarrhea
+  examples: |
+    - I have stomach pain and diarrhea. What could be causing it?
+    - Why do I have abdominal pain along with frequent urination?
+    - I’ve been experiencing painful urination and a sore throat. Could they be related?
+    - What should I do if I have a cough, sore throat, and stomach pain?
+    - I’ve had frequent urination and diarrhea for two days. What can I take to feel better?
+    - Is it normal to have stomach pain and painful urination at the same time?
+    - I have a sore throat and abdominal pain. Could this be an infection?
+    - iam having loose motion and stomach pain
+    - i have loose stools 
+    - iam having loose motions
+   
+- intent: periods_mentsuration_mentsural_cramps_mood_swings_mensural
+  examples: |
+    - Why do I have pain in my lower abdomen during my period?
+    - I’m feeling tired and my back aches. Could this be from my period?
+    - Is it normal to feel nauseous and have diarrhea during my period?
+    - I have bad cramps and headaches during my period. What can I do to feel better?
+    - Why do I get dizzy and have mood swings when my period starts?
+    - Is it normal for my mood to swing and feel irritable when I have cramps?
+    - The cramps are so bad that I’m feeling too weak to do anything. Should I be worried?
+    - iam having stomach pain, in periods
+    - iam in periods and having stomach pain
+    - iam having period cramps
+    - iam having menstural cramps
+    - iam in mensturation and having stomach pain
+  
+- intent: needing_to_pee_often_female_strong_smelling_male
+  examples: |
+    - It hurts when I pee, and I feel a burning sensation.
+    - I’ve been needing to pee all the time, but not much comes out.
+    - The urine looks cloudy, and it smells different than usual.
+    - I feel pain or pressure in my lower abdomen when I go to the bathroom.
+    - I’ve had a lot of discomfort, especially when urinating, and I feel tired and feverish.
+    - I’m peeing more frequently, and there’s a stinging sensation every time.
+    - My lower belly feels sore, and I have a constant urge to pee
+    - iam peeing many times in a day iam a female
+    - iam peeing many times in a day iam a male
+    - iam peeing frequently
+    - iam going to pee many times
+    - i have urge to pee frequently
+
+- intent: vaginal_discharge_white
+  examples: |
+    - I’ve been having white discharge for a few days. Is this normal?
+    - Why do I have thick white discharge without any itching?
+    - I noticed white discharge, and it’s a bit more than usual. Should I be concerned?
+    - I’ve been seeing white discharge, but there’s no odor. Is it related to my cycle?
+    - Can white discharge be a sign of an infection or something else?
+    - I’m getting thick, white discharge but no other symptoms. What could it mean?
+    - I’ve had white discharge for the past week. Should I talk to a doctor about it?
+    - i have white discharge
+    - i have vaginal discharge
+
+- intent: itching_burning_vulva_swelling_redness
+  examples: |
+    - I’ve been feeling constant itching around the vulva area. What could be causing this?
+    - Why do I have an intense itch down there that doesn’t seem to go away
+    - I have itching around my genitals, especially at night. Is this normal?
+    - I’ve had vulva itching for a few days now, and it’s really uncomfortable. What should I do?
+    - The skin around my vulva feels itchy and irritated. Should I be worried?
+    - I’ve noticed dryness and itching in the vulva area. Could this be an infection?
+    - Why am I experiencing itching and slight burning in my vulva, but there’s no discharge?
+    - i have itchy vagina
+    - iam having itching in vagina
+
+- intent: pimples_bumps_acne
+  examples: |
+    - Why am I getting so many breakouts on my face?
+    - I've had a lot of pimples and blackheads recently. What could be causing this?
+    - Why do I keep getting acne on my forehead and chin?
+    - My skin is oily and I keep getting acne. Is there anything I can do to stop it?
+    - iam having pimples on face and body.
+    - i have pimples on face
+    - i have pimples on body
+    - i have pimples on back
+    - i have pimples on body and face
+    - i have pimples on face and body
+      
+- intent: itchy_rash_bumps_blisters_burning_allergic_reaction
+  examples: |
+    - I have a red, itchy rash on my skin. Could this be due to something I touched?
+    - My skin is dry and peeling after using a new soap. What could be causing this reaction?
+    - I noticed some small blisters on my hands after gardening. Is it an allergic reaction?
+    - There’s a burning sensation on my skin after wearing new jewelry. Could it be an allergy?
+    - I have a rash that appeared on my wrist after using a wristwatch. Could the metal be causing this?
+    - i have rashes on body
+    - i have rash and blisters
+    - i have blistes
+
+- intent: fever_body_pain_fatigue
+  examples: |
+    - I’ve had a fever with body aches for a few days. Could this be something serious?
+    - Why am I feeling so tired with a slight fever and body pain?
+    - I’m experiencing fatigue, body aches, and a mild fever. What might be causing this?
+    - I've been feeling exhausted, with a fever and aching all over. What should I do?
+    - I have a low-grade fever and my whole body feels sore. Could it be an infection?
+    - i have fever and body pain
+    - i have body pain
+    - I am having body pain from 4 days
+
+- intent: burning_ache_vomiting_gas_burping
+  examples: |
+    - I have a burning pain in my stomach; could it be gastritis?
+    - Why do I feel bloated and nauseous after eating?
+    - I’m having stomach pain and it gets worse when I eat; could this be gastritis?
+    - What could be causing this sour or acidic feeling in my stomach?
+    - I feel full quickly, even after eating a small meal. Is this related to gastritis?
+    - I’ve been burping a lot and feeling uncomfortable after meals. Could it be a sign of gastritis?
+    - i have burning sensation in chest 
+    - i have chest burning and vomiting
+    - i have burning sensation in chest and vomiting
+
+- intent: loose_motion_stools_watery_poop_diarrhea
+  examples: |
+    - Every time I eat certain foods, I end up with cramps and diarrhea. Could this be a sign of IBS?
+    - iam having loose stools frequently.
+    - iam having loose motions.
+    - iam having diarrhea and bloating.
+    - I get frequent burping, and my stomach feels bloated and having loose stools.
+    - i have loose motion
+    - i loose stools
+
+- intent: loose_stools_severe_abdomen_pain_sharp_diarrhea
+  examples: |
+    - I have loose stools and am experiencing abdominal pain.
+    - My bowel movements have been loose, and I feel a lot of discomfort in my stomach.
+    - I’m dealing with abdominal pain along with diarrhea.
+    - I’ve been having frequent loose stools and cramping in my abdomen.
+    - There’s been a lot of pressure in my stomach, and my stools are loose.
+    - I’m experiencing sharp abdominal pain that comes with loose bowel movements.
+    - i have loose stools and stomach pain
+    - i have loose motion and stomach pain
+
+- intent: only_vomitting_throwing_up
+  examples: |
+    - I only feel like vomiting
+    - I keep vomiting.
+    - I’m feeling nauseous and vomiting.
+    - I’m experiencing only vomiting
+    - I’m just throwing up
+    - All I’m doing is throwing up.
+    - i have only vomits
+    - i have vomit frequently
+    - i have vomits many times a day
+    - i have vomit sensation
+
+- intent: headache_nausea
+  examples: |
+    - I have a headache and feel nauseous
+    - I’m dealing with a headache and a bit of nausea.
+    - My head hurts, and I feel like I might throw up.
+    - I’m experiencing a headache along with some nausea
+    - I’ve got a bad headache and I’m feeling sick to my stomach.
+    - I feel nauseous and have a throbbing headache.
+    - i have headache
+    - i feel nauseous
+    - i feel headpain
+    - i feel headache
+
+- intent: general_body_pain_ache_aches_discomfort_muscle
+  examples: |
+    - My whole body aches
+    - I feel sore all over
+    - I’m experiencing pain everywhere.
+    - I have a dull ache throughout my body.
+    - I’m feeling discomfort in my muscles
+    - I’ve got a general feeling of pain.
+    - i have leg pain
+    - i have hand pain
+    - my leg is paining
+    - my leg pains a lot
+    - my hands pain a lot
+    - my hand is paining
+
+- intent: bleeding_heavy_flow_heavy_menstrual
+  examples: |
+    - I'm having a heavy period.
+    - My menstrual flow is really heavy.
+    - I'm dealing with a lot of bleeding this month.
+    - I have a heavier than usual menstrual flow.
+    - My period is much heavier than normal.
+    - I'm experiencing excessive bleeding during my period.
+    - i have heavy menstural flow
+    - i have heavy flow in mensturation
+    - i have heavy flow in periods
+
+- intent: cut_dizziness_tired_weakness_Shortness_of_breath_Pale_worn_out_tire
+  examples: |
+    - I feel dizzy and lightheaded often.
+    - I’m always tired, no matter how much I rest.
+    - I feel weak and low on energy most of the time.
+    - I get out of breath doing things that usually don’t tire me out.
+    - My skin looks paler than usual.
+    - Even small tasks make me feel worn out.
+    - i feel tired
+    - i feel weak
+    - i feel, dizzy, and weak
+    - i have cut my finger
+    - i have a cut
+    - i got cut today
+    - i have few cuts what to do
+    - i had a cut on my leg
+    - iam fainting
+    - I cut my finger while cooking
+
+- intent: tooth_pain_sleeplessnes_headache
+  examples: |
+    - i have tooth ache
+    - i have tooth pain
+    - my teeth hurts a lot
+    - my teeth hurt a lot
+    - my teeth is paining
+    - iam having tooth pain
+    - iam having tooth pain since today
+    - iam having tooth ache today
+
+- intent: constipation_tight_stools_painful_stools
+  examples: |
+    - i have constipation
+    - i have painful stools
+    - iam having tight stools
+    - iam having constipation
+    - i have painful constipation
+    - iam having pain in stools
+
+- intent: child_kid_development_birth_new_born_baby_phase_nutrition
+  examples: |
+    - what should i feed my child after birth
+    - what food i should give for my 5 month child
+    - what food is to be given for child development
+    - what food i should give to my new born
+    - what i should feed to my baby
+    - what i should feed for development
+    - what is the development of a child
+    - what is the development phase
+    - What foods and nutrition should I provide to support my baby's healthy development?
+
+- intent: want_craving_for_to_have_eat_fond_spicy_food_spice
+  examples: |
+    - i want to eat spicy food
+    - iam craving to eat spicy food
+    - i love to eat spicy food
+    - i want spicy food
+    - why do i crave for spicy food
+    - iam craving for something spicy
+
+- intent: want_craving_for_to_have_eat_fond_sweet_sweets_chocolate_chocolates
+  examples: |
+    - i want to eat sweet
+    - iam craving to eat sweet food
+    - i love to eat sweets
+    - i want chocolates
+    - i want to eat chocolates
+    - iam craving for sometnig chocolaty
+    - iam craving for some chocolate
+    - i want to eat chocolate
+    - i want to eat something sweet
+    - iam craving for something sweet
+    - iam craving for some chocolates
+
+- intent: want_craving_for_to_have_eat_fond_salty_salt
+  examples: |
+    - i want to eat something salty
+    - iam craving to eat salty food
+    - i love to eat salty food
+    - i want salty food
+    - i want to eat salty food
+    - iam craving for something salty food
+    - iam craving for some salty food
+    - i want to eat salty food
+    - i want to eat something salty 
+    - iam craving for something salty chips
+    - iam craving for some salty food
+
+- intent: want_craving_for_to_have_eat_fond_sour_soury
+  examples: |
+    - i want to eat something sour
+    - iam craving to eat sour food
+    - i love to eat sour
+    - i want sour food
+    - i want to eat sour food
+    - iam craving for something sour food
+    - iam craving for some sour food
+    - i want to eat sour food
+    - i want to eat something sour
+    - iam craving for something sour 
+    - iam craving for something sour
+  
+- intent: want_craving_for_to_have_eat_fond_sour_soury
+  examples: |
+    - i want to eat something sour
+    - iam craving to eat sour food
+    - i love to eat sour
+    - i want sour food
+    - i want to eat sour food
+    - iam craving for something sour food
+    - iam craving for some sour food
+    - i want to eat sour food
+    - i want to eat something sour
+    - iam craving for something sour 
+    - iam craving for something sour
+
+- intent: signs_child_development_healthy_baby_how_to_know       
+  examples: |
+    - how to know the baby is healthy
+    - what are the signs of a healthy baby
+    - is my child healthy
+    - how do i know my child is healthy
+    - what are the signs of a healthy baby after birth
+    - what are the signs of a healthy newborn
+    - how to know a newborn is healthy
+    - how do we know the chid is healthy 
+    - what are the signs of healthy baby development
+    - what are signs of healthy development of a baby  
+    - what are the signs of a healthy baby

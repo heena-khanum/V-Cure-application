@@ -1,0 +1,186 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: dry_cough_coughing_without_no_fever_30_31_32_33_34_35_36_37_38_39_40 path
+  steps:
+  - intent: dry_cough_coughing_without_no_fever_30_31_32_33_34_35_36_37_38_39_40
+  - action: utter_dry_cough_coughing_without_no_fever_30_31_32_33_34_35_36_37_38_39_40
+
+- story: dry_cough_with_fever_30_31_32_33_34_35_36_37_38_39_40 path
+  steps:
+  - intent: dry_cough_with_fever_30_31_32_33_34_35_36_37_38_39_40
+  - action: utter_dry_cough_with_fever_30_31_32_33_34_35_36_37_38_39_40
+
+- story: dry_cough_without_no_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70 path
+  steps:
+  - intent: dry_cough_without_no_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+  - action: utter_dry_cough_without_no_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+
+- story: dry_cough_with_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70 path
+  steps:
+  - intent: dry_cough_with_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+  - action: utter_dry_cough_with_fever_41_42_43_44_45_46_47_48_49_50_51_52_53_54_55_56_57_58_59_60_61_62_63_64_65_66_67_68_69_70
+
+- story: runny_nose_sneezing_watery_eyes path
+  steps:
+  - intent: runny_nose_sneezing_watery_eyes
+  - action: utter_runny_nose_sneezing_watery_eyes
+
+- story: wet_cough_witout_fever_no path
+  steps:
+  - intent: wet_cough_witout_fever_no
+  - action: utter_wet_cough_witout_fever_no
+
+- story: wet_cough_with_fever path
+  steps:
+  - intent: wet_cough_with_fever
+  - action: utter_wet_cough_with_fever
+
+- story: stomach_pain_Abdominal_pain_painful_urination_frequent_urination_Cough_sore_throat_diarrhea path
+  steps:
+  - intent: stomach_pain_Abdominal_pain_painful_urination_frequent_urination_Cough_sore_throat_diarrhea
+  - action: utter_stomach_pain_Abdominal_pain_painful_urination_frequent_urination_Cough_sore_throat_diarrhea
+
+- story: periods_mentsuration_mentsural_cramps_mood_swings_mensural path
+  steps:
+  - intent: periods_mentsuration_mentsural_cramps_mood_swings_mensural
+  - action: utter_periods_mentsuration_mentsural_cramps_mood_swings_mensural
+
+- story: needing_to_pee_often_female_strong_smelling_male path
+  steps:
+  - intent: needing_to_pee_often_female_strong_smelling_male
+  - action: utter_needing_to_pee_often_female_strong_smelling_male
+
+- story: vaginal_discharge_white path
+  steps:
+  - intent: vaginal_discharge_white
+  - action: utter_vaginal_discharge_white
+
+- story: itching_burning_vulva_swelling_redness path
+  steps:
+  - intent: itching_burning_vulva_swelling_redness
+  - action: utter_itching_burning_vulva_swelling_redness
+
+- story: pimples_bumps_acne path
+  steps:
+  - intent: pimples_bumps_acne
+  - action: utter_pimples_bumps_acne
+
+- story: itchy_rash_bumps_blisters_burning_allergic_reaction path
+  steps:
+  - intent: itchy_rash_bumps_blisters_burning_allergic_reaction
+  - action: utter_itchy_rash_bumps_blisters_burning_allergic_reaction
+
+- story: fever_body_pain_fatigue path
+  steps:
+  - intent: fever_body_pain_fatigue
+  - action: utter_fever_body_pain_fatigue
+
+- story: burning_ache_vomiting_gas_burping path
+  steps:
+  - intent: burning_ache_vomiting_gas_burping
+  - action: utter_burning_ache_vomiting_gas_burping
+
+- story: loose_motion_stools_watery_poop_diarrhea path
+  steps:
+  - intent: loose_motion_stools_watery_poop_diarrhea
+  - action: utter_loose_motion_stools_watery_poop_diarrhea
+
+- story: loose_stools_severe_abdomen_pain_sharp_diarrhea path
+  steps:
+  - intent: loose_stools_severe_abdomen_pain_sharp_diarrhea
+  - action: utter_loose_stools_severe_abdomen_pain_sharp_diarrhea
+
+- story: only_vomitting_throwing_up path
+  steps:
+  - intent: only_vomitting_throwing_up
+  - action: utter_only_vomitting_throwing_up
+
+- story: headache_nausea path
+  steps:
+  - intent: headache_nausea
+  - action: utter_headache_nausea
+
+- story: general_body_pain_ache_aches_discomfort_muscle path
+  steps:
+  - intent: general_body_pain_ache_aches_discomfort_muscle
+  - action: utter_general_body_pain_ache_aches_discomfort_muscle
+
+- story: bleeding_heavy_flow_heavy_menstrual path
+  steps:
+  - intent: bleeding_heavy_flow_heavy_menstrual
+  - action: utter_bleeding_heavy_flow_heavy_menstrual
+
+- story: cut_dizziness_tired_weakness_Shortness_of_breath_Pale_worn_out_tire path
+  steps:
+  - intent: cut_dizziness_tired_weakness_Shortness_of_breath_Pale_worn_out_tire
+  - action: utter_cut_dizziness_tired_weakness_Shortness_of_breath_Pale_worn_out_tire
+
+- story: tooth_pain_sleeplessnes_headache path
+  steps:
+  - intent: tooth_pain_sleeplessnes_headache
+  - action: utter_tooth_pain_sleeplessnes_headache
+
+- story: constipation_tight_stools_painful_stools path
+  steps:
+  - intent: constipation_tight_stools_painful_stools
+  - action: utter_constipation_tight_stools_painful_stools
+
+- story: child_kid_development_birth_new_born_baby_phase_nutition path
+  steps:
+  - intent: child_kid_development_birth_new_born_baby_phase_nutrition
+  - action: utter_child_kid_development_birth_new_born_baby_phase_nutrition
+
+- story: want_craving_for_to_have_eat_fond_spicy_food_spice path
+  steps:
+  - intent: want_craving_for_to_have_eat_fond_spicy_food_spice
+  - action: utter_want_craving_for_to_have_eat_fond_spicy_food_spice
+
+- story: want_craving_for_to_have_eat_fond_sweet_sweets_chocolate_chocolates path
+  steps:
+  - intent: want_craving_for_to_have_eat_fond_sweet_sweets_chocolate_chocolates
+  - action: utter_want_craving_for_to_have_eat_fond_sweet_sweets_chocolate_chocolates
+
+- story: want_craving_for_to_have_eat_fond_salty_salt path
+  steps:
+  - intent: want_craving_for_to_have_eat_fond_salty_salt
+  - action: utter_want_craving_for_to_have_eat_fond_salty_salt
+
+- story: want_craving_for_to_have_eat_fond_sour_soury path
+  steps:
+  - intent: want_craving_for_to_have_eat_fond_sour_soury
+  - action: utter_want_craving_for_to_have_eat_fond_sour_soury
+
+- story: signs_child_development_healthy_baby_how_to_know path
+  steps:
+  - intent: signs_child_development_healthy_baby_how_to_know
+  - action: utter_signs_child_development_healthy_baby_how_to_know
+
